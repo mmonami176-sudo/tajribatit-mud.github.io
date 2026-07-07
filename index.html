@@ -28,25 +28,6 @@ color:var(--text);
 overflow-x:hidden;
 line-height:1.7;
 }
-body.loading{overflow:hidden}
-
-/* Loading */
-.loader{
-position:fixed;inset:0;z-index:9999;
-background:var(--black);
-display:flex;align-items:center;justify-content:center;
-transition:opacity .8s, visibility .8s;
-}
-.loader.hidden{opacity:0;visibility:hidden}
-.loader-inner{
-width:60px;height:60px;
-border:2px solid rgba(212,175,55,0.15);
-border-top-color:var(--gold);
-border-radius:50%;
-animation:spin 1s linear infinite;
-}
-@keyframes spin{to{transform:rotate(360deg)}}
-
 /* Top Notice */
 .top-notice{
 background:linear-gradient(90deg,rgba(212,175,55,0.1),rgba(212,175,55,0.05),rgba(212,175,55,0.1));
@@ -773,8 +754,7 @@ font-size:14px;
 <body class="loading">
 
 <!-- Loader -->
-<div class="loader" id="loader">
-<div class="loader-inner"></div>
+
 </div>
 
 <!-- Top Notice -->
@@ -1184,14 +1164,6 @@ observer.unobserve(e.target);
 },{threshold:0.1});
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 }
-
-// Loader
-window.addEventListener('load',()=>{
-setTimeout(()=>{
-document.getElementById('loader').classList.add('hidden');
-document.body.classList.remove('loading');
-},800);
-});
 
 // Init
 renderProducts();
