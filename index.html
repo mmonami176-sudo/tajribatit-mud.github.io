@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>زيوت عطرية بالجملة | طلب احترافي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--gold:#D4AF37;
+--gold-light:#F4D03F;
+--gold-dark:#B8941F;
+--black:#0a0a0a;
+--dark:#111;
+--dark2:#1a1a1a;
+--glass:rgba(255,255,255,0.04);
+--glass-border:rgba(212,175,55,0.15);
+--text:#f5f5f5;
+--text-dim:#a0a0a0;
+}
+html{scroll-behavior:smooth}
+body{
+font-family:'Tajawal',sans-serif;
+background:var(--black);
+color:var(--text);
+overflow-x:hidden;
+line-height:1.7;
+}
+body.loading{overflow:hidden}
+
+/* Loading */
+.loader{
+position:fixed;inset:0;z-index:9999;
+background:var(--black);
+display:flex;align-items:center;justify-content:center;
+transition:opacity .8s, visibility .8s;
+}
+.loader.hidden{opacity:0;visibility:hidden}
+.loader-inner{
+width:60px;height:60px;
+border:2px solid rgba(212,175,55,0.15);
+border-top-color:var(--gold);
+border-radius:50%;
+animation:spin 1s linear infinite;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* Top Notice */
+.top-notice{
+background:linear-gradient(90deg,rgba(212,175,55,0.1),rgba(212,175,55,0.05),rgba(212,175,55,0.1));
+border-bottom:1px solid var(--glass-border);
+padding:12px 20px;
+text-align:center;
+font-size:14px;
+color:var(--gold-light);
+position:relative;
+overflow:hidden;
+}
+.top-notice::before{
+content:'';position:absolute;inset:0;
+background:linear-gradient(90deg,transparent,rgba(212,175,55,0.2),transparent);
+animation:shimmer 3s infinite;
+}
+@keyframes shimmer{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+
+/* Navigation */
+.nav{
+position:sticky;top:0;z-index:100;
+background:rgba(10,10,10,0.85);
+backdrop-filter:blur(20px);
+-webkit-backdrop-filter:blur(20px);
+border-bottom:1px solid var(--glass-border);
+padding:16px 5%;
+display:flex;justify-content:space-between;align-items:center;
+}
+.nav-logo{
+font-family:'Amiri',serif;
+font-size:24px;
+color:var(--gold);
+font-weight:700;
+letter-spacing:1px;
+}
+.nav-logo span{color:var(--text)}
+.nav-cta{
+background:linear-gradient(135deg,var(--gold),var(--gold-dark));
+color:var(--black);
+padding:10px 24px;
+border-radius:30px;
+font-weight:700;
+font-size:14px;
+border:none;cursor:pointer;
+transition:all .3s;
+}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(212,175,55,0.4)}
+
+/* Hero */
+.hero{
+min-height:100vh;
+position:relative;
+display:flex;align-items:center;justify-content:center;
+padding:80px 5%;
+overflow:hidden;
+}
+.hero-bg{
+position:absolute;inset:0;
+background:url('https://image.qwenlm.ai/public_source/efe2000d-59ac-4e3a-9049-d57d24c2ab37/1e98c164f-d4eb-41dd-a1d6-3b4fb5bf9935.png') center/cover;
+filter:brightness(0.35);
+transform:scale(1.1);
+animation:heroZoom 20s ease-in-out infinite alternate;
+}
+@keyframes heroZoom{to{transform:scale(1.2)}}
+.hero-overlay{
+position:absolute;inset:0;
+background:linear-gradient(180deg,rgba(10,10,10,0.4) 0%,rgba(10,10,10,0.8) 70%,var(--black) 100%);
+}
+.hero-content{
+position:relative;z-index:2;
+text-align:center;
+max-width:900px;
+}
+.hero-badge{
+display:inline-block;
+padding:8px 20px;
+border:1px solid var(--gold);
+border-radius:30px;
+color:var(--gold);
+font-size:13px;
+margin-bottom:30px;
+background:rgba(212,175,55,0.08);
+backdrop-filter:blur(10px);
+animation:fadeInDown 1s ease;
+}
+.hero h1{
+font-family:'Amiri',serif;
+font-size:clamp(36px,6vw,72px);
+font-weight:700;
+line-height:1.2;
+margin-bottom:24px;
+background:linear-gradient(135deg,#fff 0%,var(--gold-light) 50%,var(--gold) 100%);
+-webkit-background-clip:text;
+background-clip:text;
+-webkit-text-fill-color:transparent;
+animation:fadeInUp 1s ease .2s both;
+}
+.hero-sub{
+font-size:clamp(16px,2vw,20px);
+color:var(--text-dim);
+margin-bottom:40px;
+animation:fadeInUp 1s ease .4s both;
+}
+.hero-btn{
+display:inline-flex;align-items:center;gap:10px;
+background:linear-gradient(135deg,var(--gold),var(--gold-dark));
+color:var(--black);
+padding:18px 42px;
+border-radius:50px;
+font-size:18px;
+font-weight:700;
+border:none;cursor:pointer;
+text-decoration:none;
+position:relative;
+overflow:hidden;
+transition:all .4s;
+animation:fadeInUp 1s ease .6s both;
+box-shadow:0 10px 40px rgba(212,175,55,0.3);
+}
+.hero-btn::before{
+content:'';position:absolute;inset:0;
+background:linear-gradient(135deg,var(--gold-light),var(--gold));
+opacity:0;transition:opacity .4s;
+}
+.hero-btn:hover{transform:translateY(-3px);box-shadow:0 15px 50px rgba(212,175,55,0.5)}
+.hero-btn:hover::before{opacity:1}
+.hero-btn span{position:relative;z-index:1}
+.hero-btn svg{position:relative;z-index:1}
+
+.hero-scroll{
+position:absolute;bottom:30px;left:50%;
+transform:translateX(-50%);
+color:var(--gold);
+font-size:12px;
+display:flex;flex-direction:column;align-items:center;gap:8px;
+animation:bounce 2s infinite;
+}
+@keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(10px)}}
+
+/* Floating particles */
+.particles{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.particle{
+position:absolute;
+width:4px;height:4px;
+background:var(--gold);
+border-radius:50%;
+opacity:0.3;
+animation:float 15s infinite;
+}
+@keyframes float{
+0%,100%{transform:translateY(0) translateX(0);opacity:0}
+10%{opacity:0.4}
+90%{opacity:0.4}
+100%{transform:translateY(-100vh) translateX(50px);opacity:0}
+}
+
+/* Sections */
+section{padding:100px 5%;position:relative}
+.section-header{text-align:center;margin-bottom:70px}
+.section-label{
+display:inline-block;
+color:var(--gold);
+font-size:13px;
+letter-spacing:3px;
+text-transform:uppercase;
+margin-bottom:16px;
+font-weight:500;
+}
+.section-title{
+font-family:'Amiri',serif;
+font-size:clamp(28px,4vw,48px);
+font-weight:700;
+margin-bottom:16px;
+background:linear-gradient(135deg,#fff,var(--gold));
+-webkit-background-clip:text;
+background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+.section-desc{
+color:var(--text-dim);
+font-size:17px;
+max-width:600px;
+margin:0 auto;
+}
+
+/* Features */
+.features-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:24px;
+max-width:1200px;
+margin:0 auto;
+}
+.feature-card{
+background:var(--glass);
+backdrop-filter:blur(20px);
+-webkit-backdrop-filter:blur(20px);
+border:1px solid var(--glass-border);
+border-radius:20px;
+padding:36px 28px;
+text-align:center;
+transition:all .4s;
+position:relative;
+overflow:hidden;
+}
+.feature-card::before{
+content:'';position:absolute;top:0;left:50%;
+transform:translateX(-50%);
+width:60%;height:1px;
+background:linear-gradient(90deg,transparent,var(--gold),transparent);
+}
+.feature-card:hover{
+transform:translateY(-8px);
+border-color:var(--gold);
+box-shadow:0 20px 60px rgba(212,175,55,0.15);
+}
+.feature-icon{
+width:60px;height:60px;
+margin:0 auto 20px;
+background:linear-gradient(135deg,rgba(212,175,55,0.2),rgba(212,175,55,0.05));
+border-radius:16px;
+display:flex;align-items:center;justify-content:center;
+font-size:28px;
+border:1px solid var(--glass-border);
+}
+.feature-card h3{
+font-size:18px;
+margin-bottom:8px;
+color:var(--gold-light);
+}
+.feature-card p{
+color:var(--text-dim);
+font-size:14px;
+}
+
+/* Products */
+.products-grid{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+gap:24px;
+max-width:1300px;
+margin:0 auto;
+}
+.product-card{
+background:var(--glass);
+backdrop-filter:blur(20px);
+-webkit-backdrop-filter:blur(20px);
+border:1px solid var(--glass-border);
+border-radius:24px;
+overflow:hidden;
+transition:all .4s;
+position:relative;
+}
+.product-card:hover{
+transform:translateY(-8px);
+border-color:rgba(212,175,55,0.4);
+box-shadow:0 25px 60px rgba(0,0,0,0.5);
+}
+.product-img{
+width:100%;height:240px;
+object-fit:cover;
+display:block;
+transition:transform .6s;
+}
+.product-card:hover .product-img{transform:scale(1.08)}
+.product-info{padding:20px}
+.product-name{
+font-family:'Amiri',serif;
+font-size:20px;
+font-weight:700;
+margin-bottom:6px;
+color:var(--text);
+}
+.product-size{
+color:var(--text-dim);
+font-size:13px;
+margin-bottom:12px;
+}
+.product-price{
+color:var(--gold);
+font-size:22px;
+font-weight:700;
+margin-bottom:16px;
+}
+.product-price small{
+color:var(--text-dim);
+font-size:13px;
+font-weight:400;
+}
+.qty-control{
+display:flex;align-items:center;justify-content:center;
+gap:12px;
+margin-bottom:14px;
+background:rgba(0,0,0,0.3);
+padding:8px;
+border-radius:12px;
+border:1px solid var(--glass-border);
+}
+.qty-btn{
+width:32px;height:32px;
+border-radius:8px;
+background:rgba(212,175,55,0.15);
+border:1px solid var(--glass-border);
+color:var(--gold);
+font-size:18px;
+cursor:pointer;
+display:flex;align-items:center;justify-content:center;
+transition:all .2s;
+font-weight:700;
+}
+.qty-btn:hover{background:var(--gold);color:var(--black)}
+.qty-btn:disabled{opacity:0.3;cursor:not-allowed}
+.qty-val{
+font-size:18px;
+font-weight:700;
+min-width:30px;
+text-align:center;
+color:var(--text);
+}
+.add-btn{
+width:100%;
+padding:12px;
+background:linear-gradient(135deg,rgba(212,175,55,0.15),rgba(212,175,55,0.05));
+border:1px solid var(--glass-border);
+border-radius:12px;
+color:var(--gold);
+font-weight:700;
+font-size:14px;
+cursor:pointer;
+transition:all .3s;
+font-family:inherit;
+}
+.add-btn:hover{
+background:linear-gradient(135deg,var(--gold),var(--gold-dark));
+color:var(--black);
+}
+.add-btn.added{
+background:linear-gradient(135deg,#27ae60,#2ecc71);
+color:#fff;
+border-color:#27ae60;
+}
+
+/* Benefits */
+.benefits{
+background:linear-gradient(180deg,var(--black) 0%,rgba(20,20,20,0.5) 50%,var(--black) 100%);
+}
+.benefits-wrap{
+max-width:1100px;
+margin:0 auto;
+display:grid;
+grid-template-columns:1fr auto 1fr;
+gap:40px;
+align-items:center;
+}
+.benefit-col{
+background:var(--glass);
+backdrop-filter:blur(20px);
+border:1px solid var(--glass-border);
+border-radius:24px;
+padding:40px 30px;
+}
+.benefit-col.before{border-color:rgba(231,76,60,0.3)}
+.benefit-col.after{border-color:rgba(39,174,96,0.3)}
+.benefit-col h3{
+font-size:22px;
+margin-bottom:24px;
+text-align:center;
+}
+.benefit-col.before h3{color:#e74c3c}
+.benefit-col.after h3{color:#2ecc71}
+.benefit-item{
+padding:16px;
+margin-bottom:12px;
+background:rgba(0,0,0,0.3);
+border-radius:12px;
+font-size:16px;
+display:flex;align-items:center;gap:12px;
+}
+.benefit-item .icon{font-size:22px}
+.benefit-divider{
+font-size:60px;
+color:var(--gold);
+font-family:'Amiri',serif;
+}
+
+/* Testimonials */
+.testimonials-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:24px;
+max-width:1200px;
+margin:0 auto;
+}
+.testimonial-card{
+background:var(--glass);
+backdrop-filter:blur(20px);
+border:1px solid var(--glass-border);
+border-radius:24px;
+padding:32px;
+position:relative;
+transition:all .4s;
+}
+.testimonial-card:hover{
+transform:translateY(-5px);
+border-color:var(--gold);
+}
+.testimonial-card::before{
+content:'"';
+position:absolute;
+top:-10px;right:20px;
+font-family:'Amiri',serif;
+font-size:100px;
+color:var(--gold);
+opacity:0.3;
+line-height:1;
+}
+.testimonial-text{
+font-size:15px;
+line-height:1.8;
+margin-bottom:20px;
+color:var(--text);
+position:relative;
+z-index:1;
+}
+.testimonial-stars{
+color:var(--gold);
+margin-bottom:12px;
+font-size:14px;
+}
+.testimonial-author{
+display:flex;align-items:center;gap:12px;
+}
+.testimonial-avatar{
+width:44px;height:44px;
+border-radius:50%;
+background:linear-gradient(135deg,var(--gold),var(--gold-dark));
+display:flex;align-items:center;justify-content:center;
+color:var(--black);
+font-weight:700;
+font-size:18px;
+}
+.testimonial-name{font-weight:700;font-size:15px}
+.testimonial-loc{color:var(--text-dim);font-size:13px}
+
+/* FAQ */
+.faq-wrap{max-width:800px;margin:0 auto}
+.faq-item{
+background:var(--glass);
+backdrop-filter:blur(20px);
+border:1px solid var(--glass-border);
+border-radius:16px;
+margin-bottom:14px;
+overflow:hidden;
+transition:all .3s;
+}
+.faq-item.active{border-color:var(--gold)}
+.faq-q{
+padding:22px 26px;
+cursor:pointer;
+display:flex;justify-content:space-between;align-items:center;
+font-weight:700;
+font-size:16px;
+transition:color .3s;
+}
+.faq-q:hover{color:var(--gold)}
+.faq-arrow{
+color:var(--gold);
+transition:transform .3s;
+font-size:14px;
+}
+.faq-item.active .faq-arrow{transform:rotate(180deg)}
+.faq-a{
+max-height:0;
+overflow:hidden;
+transition:max-height .4s ease,padding .4s;
+padding:0 26px;
+color:var(--text-dim);
+font-size:15px;
+line-height:1.8;
+}
+.faq-item.active .faq-a{
+max-height:200px;
+padding:0 26px 22px;
+}
+
+/* Footer */
+.footer{
+background:var(--dark);
+border-top:1px solid var(--glass-border);
+padding:50px 5% 24px;
+text-align:center;
+}
+.footer-logo{
+font-family:'Amiri',serif;
+font-size:28px;
+color:var(--gold);
+margin-bottom:16px;
+}
+.footer-text{
+color:var(--text-dim);
+font-size:14px;
+margin-bottom:24px;
+max-width:500px;
+margin-left:auto;margin-right:auto;
+}
+.footer-socials{
+display:flex;justify-content:center;gap:16px;
+margin-bottom:30px;
+}
+.footer-socials a{
+width:40px;height:40px;
+border-radius:50%;
+background:var(--glass);
+border:1px solid var(--glass-border);
+display:flex;align-items:center;justify-content:center;
+color:var(--gold);
+text-decoration:none;
+transition:all .3s;
+font-size:16px;
+}
+.footer-socials a:hover{
+background:var(--gold);
+color:var(--black);
+transform:translateY(-3px);
+}
+.footer-bottom{
+border-top:1px solid var(--glass-border);
+padding-top:20px;
+color:var(--text-dim);
+font-size:13px;
+}
+
+/* Floating Cart */
+.cart-float{
+position:fixed;
+bottom:30px;left:30px;
+z-index:99;
+background:linear-gradient(135deg,var(--gold),var(--gold-dark));
+color:var(--black);
+width:60px;height:60px;
+border-radius:50%;
+display:flex;align-items:center;justify-content:center;
+cursor:pointer;
+box-shadow:0 10px 40px rgba(212,175,55,0.4);
+transition:all .3s;
+font-size:24px;
+}
+.cart-float:hover{transform:scale(1.1)}
+.cart-badge{
+position:absolute;
+top:-5px;right:-5px;
+background:#e74c3c;
+color:#fff;
+width:24px;height:24px;
+border-radius:50%;
+font-size:12px;
+font-weight:700;
+display:flex;align-items:center;justify-content:center;
+border:2px solid var(--black);
+}
+.cart-badge.hidden{display:none}
+
+/* Cart Panel */
+.cart-panel{
+position:fixed;
+top:0;left:-450px;
+width:420px;max-width:90vw;
+height:100vh;
+background:rgba(15,15,15,0.95);
+backdrop-filter:blur(30px);
+-webkit-backdrop-filter:blur(30px);
+border-right:1px solid var(--glass-border);
+z-index:200;
+transition:left .4s cubic-bezier(.4,0,.2,1);
+display:flex;flex-direction:column;
+}
+.cart-panel.open{left:0}
+.cart-header{
+padding:24px;
+border-bottom:1px solid var(--glass-border);
+display:flex;justify-content:space-between;align-items:center;
+}
+.cart-header h3{
+font-family:'Amiri',serif;
+font-size:22px;
+color:var(--gold);
+}
+.cart-close{
+width:36px;height:36px;
+border-radius:50%;
+background:var(--glass);
+border:1px solid var(--glass-border);
+color:var(--text);
+cursor:pointer;
+font-size:18px;
+display:flex;align-items:center;justify-content:center;
+transition:all .3s;
+}
+.cart-close:hover{background:var(--gold);color:var(--black)}
+.cart-items{
+flex:1;
+overflow-y:auto;
+padding:16px 24px;
+}
+.cart-items::-webkit-scrollbar{width:4px}
+.cart-items::-webkit-scrollbar-thumb{background:var(--gold);border-radius:4px}
+.cart-item{
+display:flex;gap:12px;
+padding:14px;
+background:var(--glass);
+border:1px solid var(--glass-border);
+border-radius:14px;
+margin-bottom:10px;
+align-items:center;
+}
+.cart-item-img{
+width:50px;height:50px;
+border-radius:10px;
+object-fit:cover;
+}
+.cart-item-info{flex:1;min-width:0}
+.cart-item-name{font-weight:700;font-size:14px;margin-bottom:2px}
+.cart-item-price{color:var(--gold);font-size:13px}
+.cart-item-qty{
+font-size:13px;
+color:var(--text-dim);
+background:rgba(0,0,0,0.3);
+padding:4px 10px;
+border-radius:8px;
+}
+.cart-item-remove{
+background:none;border:none;
+color:#e74c3c;cursor:pointer;
+font-size:16px;
+padding:4px;
+}
+.cart-empty{
+text-align:center;
+padding:60px 20px;
+color:var(--text-dim);
+}
+.cart-empty-icon{font-size:60px;margin-bottom:16px;opacity:0.3}
+.cart-footer{
+padding:24px;
+border-top:1px solid var(--glass-border);
+background:rgba(0,0,0,0.3);
+}
+.cart-total{
+display:flex;justify-content:space-between;
+margin-bottom:16px;
+font-size:18px;
+}
+.cart-total-val{color:var(--gold);font-weight:700;font-size:22px}
+.whatsapp-btn{
+width:100%;
+padding:16px;
+background:linear-gradient(135deg,#25D366,#128C7E);
+color:#fff;
+border:none;
+border-radius:14px;
+font-size:16px;
+font-weight:700;
+cursor:pointer;
+display:flex;align-items:center;justify-content:center;gap:10px;
+font-family:inherit;
+transition:all .3s;
+box-shadow:0 10px 30px rgba(37,211,102,0.3);
+}
+.whatsapp-btn:hover{transform:translateY(-2px);box-shadow:0 15px 40px rgba(37,211,102,0.4)}
+.whatsapp-btn:disabled{opacity:0.5;cursor:not-allowed;transform:none}
+
+/* Overlay */
+.overlay{
+position:fixed;inset:0;
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(5px);
+z-index:150;
+opacity:0;visibility:hidden;
+transition:all .3s;
+}
+.overlay.show{opacity:1;visibility:visible}
+
+/* Animations */
+@keyframes fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeInDown{from{opacity:0;transform:translateY(-30px)}to{opacity:1;transform:translateY(0)}}
+.reveal{opacity:0;transform:translateY(40px);transition:all .8s cubic-bezier(.4,0,.2,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* Responsive */
+@media(max-width:768px){
+section{padding:70px 5%}
+.benefits-wrap{grid-template-columns:1fr;gap:20px}
+.benefit-divider{transform:rotate(90deg);margin:0 auto}
+.cart-float{bottom:20px;left:20px;width:54px;height:54px}
+.products-grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px}
+.product-img{height:180px}
+.product-info{padding:14px}
+.product-name{font-size:16px}
+.product-price{font-size:18px}
+.nav{padding:14px 5%}
+.nav-logo{font-size:20px}
+}
+
+/* Toast */
+.toast{
+position:fixed;
+bottom:100px;left:50%;
+transform:translateX(-50%) translateY(100px);
+background:var(--glass);
+backdrop-filter:blur(20px);
+border:1px solid var(--gold);
+color:var(--gold);
+padding:14px 28px;
+border-radius:14px;
+font-weight:700;
+z-index:300;
+opacity:0;
+transition:all .4s;
+font-size:14px;
+}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+</style>
+</head>
+<body class="loading">
+
+<!-- Loader -->
+<div class="loader" id="loader">
+<div class="loader-inner"></div>
+</div>
+
+<!-- Top Notice -->
+<div class="top-notice">
+🚀 هذا مجرد نموذج توضيحي قابل للتخصيص بالكامل حسب علامتكم التجارية.
+</div>
+
+<!-- Nav -->
+<nav class="nav">
+<div class="nav-logo">عطور <span>الملوك</span></div>
+<button class="nav-cta" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">تصفح المنتجات</button>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+<div class="hero-bg"></div>
+<div class="hero-overlay"></div>
+<div class="particles" id="particles"></div>
+<div class="hero-content">
+<div class="hero-badge">✨ جودة عالمية · أسعار الجملة</div>
+<h1>زيوت عطرية بالجملة بجودة عالية</h1>
+<p class="hero-sub">اطلب جميع الزيوت بسهولة وأرسل طلبك مباشرة عبر واتساب خلال ثوانٍ.</p>
+<a href="#products" class="hero-btn">
+<span>ابدأ الطلب الآن</span>
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+</a>
+</div>
+<div class="hero-scroll">
+<span>اسحب للأسفل</span>
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+</div>
+</section>
+
+<!-- Features -->
+<section>
+<div class="section-header reveal">
+<div class="section-label">لماذا تختارنا</div>
+<h2 class="section-title">مزايا لا تُقاوم</h2>
+<p class="section-desc">نقدم لك تجربة طلب احترافية تجمع بين الجودة والسهولة</p>
+</div>
+<div class="features-grid">
+<div class="feature-card reveal">
+<div class="feature-icon">✓</div>
+<h3>جودة مضمونة</h3>
+<p>زيوت أصلية 100% من أفضل المصادر العالمية</p>
+</div>
+<div class="feature-card reveal">
+<div class="feature-icon">💰</div>
+<h3>أسعار الجملة</h3>
+<p>أسعار تنافسية للكميات الكبيرة مع خصومات حصرية</p>
+</div>
+<div class="feature-card reveal">
+<div class="feature-icon">🚚</div>
+<h3>توصيل لجميع المدن</h3>
+<p>نوصل طلبك إلى أي مكان في المغرب بسرعة وأمان</p>
+</div>
+<div class="feature-card reveal">
+<div class="feature-icon">⚡</div>
+<h3>طلب سريع ومنظم</h3>
+<p>اختر منتجاتك وأرسل الطلب في ثوانٍ معدودة</p>
+</div>
+<div class="feature-card reveal">
+<div class="feature-icon">👑</div>
+<h3>خدمة احترافية</h3>
+<p>فريق متخصص لخدمتك والإجابة على استفساراتك</p>
+</div>
+</div>
+</section>
+
+<!-- Products -->
+<section id="products">
+<div class="section-header reveal">
+<div class="section-label">تشكيلة فاخرة</div>
+<h2 class="section-title">منتجاتنا المميزة</h2>
+<p class="section-desc">اختر الزيوت العطرية التي تناسب ذوقك وأضفها إلى طلبك</p>
+</div>
+<div class="products-grid" id="productsGrid"></div>
+</section>
+
+<!-- Benefits -->
+<section class="benefits">
+<div class="section-header reveal">
+<div class="section-label">تجربة جديدة</div>
+<h2 class="section-title">وداعاً للفوضى في الطلبات</h2>
+<p class="section-desc">نظّم طلباتك بطريقة احترافية توفر وقتك وجهدك</p>
+</div>
+<div class="benefits-wrap">
+<div class="benefit-col before reveal">
+<h3>❌ الطريقة القديمة</h3>
+<div class="benefit-item"><span class="icon">😕</span><span>السعر؟</span></div>
+<div class="benefit-item"><span class="icon">🤔</span><span>واش متوفر؟</span></div>
+<div class="benefit-item"><span class="icon">📱</span><span>بغيت 5 ديال هاد الزيت...</span></div>
+<div class="benefit-item"><span class="icon">⏳</span><span>رسائل كثيرة وانتظار طويل</span></div>
+</div>
+<div class="benefit-divider reveal">→</div>
+<div class="benefit-col after reveal">
+<h3>✓ الطريقة الجديدة</h3>
+<div class="benefit-item"><span class="icon">✨</span><span>اختر المنتجات بنقرة واحدة</span></div>
+<div class="benefit-item"><span class="icon">🛒</span><span>شاهد ملخص طلبك فوراً</span></div>
+<div class="benefit-item"><span class="icon">💬</span><span>أرسل الطلب عبر واتساب مباشرة</span></div>
+<div class="benefit-item"><span class="icon">⚡</span><span>استلم تأكيداً فورياً</span></div>
+</div>
+</div>
+</section>
+
+<!-- Testimonials -->
+<section>
+<div class="section-header reveal">
+<div class="section-label">آراء العملاء</div>
+<h2 class="section-title">ماذا يقول عملاؤنا</h2>
+<p class="section-desc">ثقة عملائنا هي أكبر شهادة على جودة خدماتنا</p>
+</div>
+<div class="testimonials-grid">
+<div class="testimonial-card reveal">
+<div class="testimonial-stars">★★★★★</div>
+<p class="testimonial-text">تجربة رائعة! الطلب أصبح سهلاً جداً والمنتجات بجودة عالية. أنصح الجميع بالتعامل معهم.</p>
+<div class="testimonial-author">
+<div class="testimonial-avatar">أ</div>
+<div>
+<div class="testimonial-name">أحمد المنصوري</div>
+<div class="testimonial-loc">الدار البيضاء</div>
+</div>
+</div>
+</div>
+<div class="testimonial-card reveal">
+<div class="testimonial-stars">★★★★★</div>
+<p class="testimonial-text">أسعار الجملة ممتازة والجودة لا تُقارن. التوصيل سريع والخدمة احترافية جداً.</p>
+<div class="testimonial-author">
+<div class="testimonial-avatar">ف</div>
+<div>
+<div class="testimonial-name">فاطمة الزهراء</div>
+<div class="testimonial-loc">الرباط</div>
+</div>
+</div>
+</div>
+<div class="testimonial-card reveal">
+<div class="testimonial-stars">★★★★★</div>
+<p class="testimonial-text">أفضل مورد زيوت عطرية تعاملت معه. التنظيم والاحترافية في أعلى مستوى.</p>
+<div class="testimonial-author">
+<div class="testimonial-avatar">ي</div>
+<div>
+<div class="testimonial-name">يوسف بنعلي</div>
+<div class="testimonial-loc">مراكش</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section>
+<div class="section-header reveal">
+<div class="section-label">أسئلة شائعة</div>
+<h2 class="section-title">إجابات لأسئلتك</h2>
+<p class="section-desc">كل ما تحتاج معرفته قبل الطلب</p>
+</div>
+<div class="faq-wrap">
+<div class="faq-item reveal">
+<div class="faq-q" onclick="toggleFaq(this)">
+<span>ما هي الكمية الدنيا للطلب بالجملة؟</span>
+<span class="faq-arrow">▼</span>
+</div>
+<div class="faq-a">الكمية الدنيا للطلب بالجملة تبدأ من 10 قطع من نفس المنتج، مع إمكانية طلب كميات أكبر للحصول على خصومات إضافية.</div>
+</div>
+<div class="faq-item reveal">
+<div class="faq-q" onclick="toggleFaq(this)">
+<span>هل الزيوت أصلية 100%؟</span>
+<span class="faq-arrow">▼</span>
+</div>
+<div class="faq-a">نعم، جميع زيوتنا مستوردة مباشرة من أفضل المصادر العالمية ونضمن جودتها بنسبة 100% مع إمكانية الاسترجاع في حال وجود أي مشكلة.</div>
+</div>
+<div class="faq-item reveal">
+<div class="faq-q" onclick="toggleFaq(this)">
+<span>كم تستغرق مدة التوصيل؟</span>
+<span class="faq-arrow">▼</span>
+</div>
+<div class="faq-a">التوصيل داخل المدن الكبرى يستغرق من 24 إلى 48 ساعة، بينما المدن الأخرى تستغرق من 2 إلى 4 أيام عمل.</div>
+</div>
+<div class="faq-item reveal">
+<div class="faq-q" onclick="toggleFaq(this)">
+<span>ما هي طرق الدفع المتاحة؟</span>
+<span class="faq-arrow">▼</span>
+</div>
+<div class="faq-a">نقبل الدفع عند الاستلام للتأكد من رضاك عن المنتج، بالإضافة إلى التحويل البنكي للطلبات الكبيرة.</div>
+</div>
+<div class="faq-item reveal">
+<div class="faq-q" onclick="toggleFaq(this)">
+<span>هل يمكنني طلب عينات قبل الشراء بالجملة؟</span>
+<span class="faq-arrow">▼</span>
+</div>
+<div class="faq-a">بالتأكيد! نوفر عينات صغيرة بأسعار رمزية لتجربة الجودة قبل الطلب بالجملة. تواصل معنا عبر واتساب لطلب العينات.</div>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+<div class="footer-logo">عطور الملوك</div>
+<p class="footer-text">نقدم لك أرقى الزيوت العطرية بأسعار الجملة مع خدمة احترافية وتوصيل سريع لجميع المدن.</p>
+<div class="footer-socials">
+<a href="#" aria-label="WhatsApp"></a>
+<a href="#" aria-label="Instagram">📷</a>
+<a href="#" aria-label="Facebook">📘</a>
+</div>
+<div class="footer-bottom">© 2024 جميع الحقوق محفوظة · نموذج توضيحي قابل للتخصيص</div>
+</footer>
+
+<!-- Floating Cart Button -->
+<div class="cart-float" id="cartFloat" onclick="toggleCart()">
+🛒
+<div class="cart-badge hidden" id="cartBadge">0</div>
+</div>
+
+<!-- Cart Panel -->
+<div class="overlay" id="overlay" onclick="toggleCart()"></div>
+<div class="cart-panel" id="cartPanel">
+<div class="cart-header">
+<h3> ملخص الطلب</h3>
+<button class="cart-close" onclick="toggleCart()">✕</button>
+</div>
+<div class="cart-items" id="cartItems">
+<div class="cart-empty">
+<div class="cart-empty-icon">️</div>
+<p>لم تضف أي منتجات بعد</p>
+</div>
+</div>
+<div class="cart-footer">
+<div class="cart-total">
+<span>إجمالي المنتجات:</span>
+<span class="cart-total-val" id="cartTotal">0</span>
+</div>
+<button class="whatsapp-btn" id="whatsappBtn" onclick="sendWhatsApp()" disabled>
+<span>💬</span>
+<span>إرسال الطلب عبر واتساب</span>
+</button>
+</div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<script>
+// Product data
+const productData=[
+{id:1,name:'عود ملكي',size:'12 مل',price:250,img:'https://image.qwenlm.ai/public_source/efe2000d-59ac-4e3a-9049-d57d24c2ab37/1074867c4-9924-4794-824a-8f5752e4a491.png'},
+{id:2,name:'مسك أبيض',size:'10 مل',price:180,img:'https://image.qwenlm.ai/public_source/efe2000d-59ac-4e3a-9049-d57d24c2ab37/151fa4aa6-96d1-4cc1-8fa8-8b8ca35b7fb8.png'},
+{id:3,name:'عنبر فاخر',size:'15 مل',price:320,img:'https://image.qwenlm.ai/public_source/efe2000d-59ac-4e3a-9049-d57d24c2ab37/1712adb25-bb08-4a8c-96fa-6c52da9fc2df.png'},
+{id:4,name:'ورد طائفي',size:'12 مل',price:280,img:'https://image.qwenlm.ai/public_source/efe2000d-59ac-4e3a-9049-d57d24c2ab37/13ce0e256-1362-4ba6-a4ab-f3e532c9706a.png'},
+{id:5,name:'بخور حجازي',size:'10 مل',price:220,img:'https://image.qwenlm.ai/public_source/efe2000d-59ac-4e3a-9049-d57d24c2ab37/1074867c4-9924-4794-824a-8f5752e4a491.png'},
+{id:6,name:'زعفران أصلي',size:'12 مل',price:350,img:'https://image.qwenlm.ai/public_source/efe2000d-59ac-4e3a-9049-d57d24c2ab37/1c4ef615e-b238-459e-a4ab-fcd4750d4f7b.png'},
+{id:7,name:'عطر السلطان',size:'15 مل',price:400,img:'https://image.qwenlm.ai/public_source/efe2000d-59ac-4e3a-9049-d57d24c2ab37/1db060225-6520-4577-b0ce-03ff2c006c2e.png'},
+{id:8,name:'دهن العود',size:'10 مل',price:500,img:'https://image.qwenlm.ai/public_source/efe2000d-59ac-4e3a-9049-d57d24c2ab37/1712adb25-bb08-4a8c-96fa-6c52da9fc2df.png'},
+{id:9,name:'ياسمين شامي',size:'12 مل',price:260,img:'https://image.qwenlm.ai/public_source/efe2000d-59ac-4e3a-9049-d57d24c2ab37/1cf9eea03-cd8b-4fcb-9a1a-9df19576a94d.png'},
+{id:10,name:'صندل هندي',size:'15 مل',price:300,img:'https://image.qwenlm.ai/public_source/efe2000d-59ac-4e3a-9049-d57d24c2ab37/1b8dd7c27-2e49-4981-acb8-9af79036d084.png'},
+{id:11,name:'فانيلا ذهبية',size:'10 مل',price:200,img:'https://image.qwenlm.ai/public_source/efe2000d-59ac-4e3a-9049-d57d24c2ab37/14d4fcdf4-e0ec-4172-877f-56d440c28474.png'},
+{id:12,name:'عطر الحرمين',size:'12 مل',price:380,img:'https://image.qwenlm.ai/public_source/efe2000d-59ac-4e3a-9049-d57d24c2ab37/1fd156adf-3bd3-4425-abf4-27e6d2d89e3d.png'}
+];
+
+const cartState={};
+const qtyState={};
+
+// Render products
+function renderProducts(){
+const grid=document.getElementById('productsGrid');
+grid.innerHTML=productData.map(p=>{
+qtyState[p.id]=0;
+return `
+<div class="product-card reveal" data-id="${p.id}">
+<img class="product-img" src="${p.img}" alt="${p.name}" loading="lazy">
+<div class="product-info">
+<div class="product-name">${p.name}</div>
+<div class="product-size">الحجم: ${p.size}</div>
+<div class="product-price">${p.price} <small>درهم</small></div>
+<div class="qty-control">
+<button class="qty-btn" onclick="changeQty(${p.id},-1)" id="dec-${p.id}" disabled>−</button>
+<span class="qty-val" id="qty-${p.id}">0</span>
+<button class="qty-btn" onclick="changeQty(${p.id},1)">+</button>
+</div>
+<button class="add-btn" id="addBtn-${p.id}" onclick="addToCart(${p.id})">إضافة إلى الطلب</button>
+</div>
+</div>
+`;
+}).join('');
+}
+
+function changeQty(id,delta){
+const newVal=(qtyState[id]||0)+delta;
+if(newVal<0)return;
+qtyState[id]=newVal;
+document.getElementById('qty-'+id).textContent=newVal;
+document.getElementById('dec-'+id).disabled=newVal===0;
+}
+
+function addToCart(id){
+const qty=qtyState[id]||0;
+if(qty<=0){showToast('اختر الكمية أولاً');return}
+const product=productData.find(p=>p.id===id);
+cartState[id]={...product,qty:qty};
+const btn=document.getElementById('addBtn-'+id);
+btn.textContent='✓ تمت الإضافة';
+btn.classList.add('added');
+setTimeout(()=>{
+btn.textContent='إضافة إلى الطلب';
+btn.classList.remove('added');
+},1500);
+qtyState[id]=0;
+document.getElementById('qty-'+id).textContent='0';
+document.getElementById('dec-'+id).disabled=true;
+updateCart();
+showToast('تمت إضافة '+product.name+' إلى الطلب');
+}
+
+function removeFromCart(id){
+delete cartState[id];
+updateCart();
+}
+
+function updateCart(){
+const items=Object.values(cartState);
+const badge=document.getElementById('cartBadge');
+const totalEl=document.getElementById('cartTotal');
+const itemsEl=document.getElementById('cartItems');
+const waBtn=document.getElementById('whatsappBtn');
+const totalQty=items.reduce((s,i)=>s+i.qty,0);
+if(totalQty>0){
+badge.classList.remove('hidden');
+badge.textContent=totalQty;
+waBtn.disabled=false;
+itemsEl.innerHTML=items.map(i=>`
+<div class="cart-item">
+<img class="cart-item-img" src="${i.img}" alt="${i.name}">
+<div class="cart-item-info">
+<div class="cart-item-name">${i.name}</div>
+<div class="cart-item-price">${i.price} درهم</div>
+</div>
+<div class="cart-item-qty">×${i.qty}</div>
+<button class="cart-item-remove" onclick="removeFromCart(${i.id})"></button>
+</div>
+`).join('');
+}else{
+badge.classList.add('hidden');
+waBtn.disabled=true;
+itemsEl.innerHTML='<div class="cart-empty"><div class="cart-empty-icon">🛍️</div><p>لم تضف أي منتجات بعد</p></div>';
+}
+totalEl.textContent=totalQty+' منتج';
+}
+
+function toggleCart(){
+document.getElementById('cartPanel').classList.toggle('open');
+document.getElementById('overlay').classList.toggle('show');
+}
+
+function sendWhatsApp(){
+const items=Object.values(cartState);
+if(items.length===0)return;
+let msg='🛍️ *طلب جديد من الموقع*\n\n';
+items.forEach((i,idx)=>{
+msg+=`${idx+1}. *${i.name}* (${i.size})\n   الكمية: ${i.qty} × ${i.price} درهم = ${i.qty*i.price} درهم\n\n`;
+});
+const total=items.reduce((s,i)=>s+i.qty*i.price,0);
+msg+=`━━━━━━━━━━━━━━\n`;
+msg+=`💰 *الإجمالي: ${total} درهم*\n`;
+msg+=`📦 *عدد المنتجات: ${items.reduce((s,i)=>s+i.qty,0)}*\n\n`;
+msg+=`شكراً لكم 🌹`;
+const encoded=encodeURIComponent(msg);
+window.open('https://wa.me/?text='+encoded,'_blank');
+showToast('تم فتح واتساب لإرسال الطلب');
+}
+
+function showToast(text){
+const toast=document.getElementById('toast');
+toast.textContent=text;
+toast.classList.add('show');
+setTimeout(()=>toast.classList.remove('show'),2500);
+}
+
+function toggleFaq(el){
+const item=el.parentElement;
+const wasActive=item.classList.contains('active');
+document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('active'));
+if(!wasActive)item.classList.add('active');
+}
+
+// Particles
+function createParticles(){
+const container=document.getElementById('particles');
+for(let i=0;i<20;i++){
+const p=document.createElement('div');
+p.className='particle';
+p.style.left=Math.random()*100+'%';
+p.style.top=(100+Math.random()*20)+'%';
+p.style.animationDelay=Math.random()*15+'s';
+p.style.animationDuration=(10+Math.random()*10)+'s';
+container.appendChild(p);
+}
+}
+
+// Scroll reveal
+function setupReveal(){
+const observer=new IntersectionObserver((entries)=>{
+entries.forEach(e=>{
+if(e.isIntersecting){
+e.target.classList.add('visible');
+observer.unobserve(e.target);
+}
+});
+},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+}
+
+// Loader
+window.addEventListener('load',()=>{
+setTimeout(()=>{
+document.getElementById('loader').classList.add('hidden');
+document.body.classList.remove('loading');
+},800);
+});
+
+// Init
+renderProducts();
+createParticles();
+setTimeout(setupReveal,100);
+</script>
+</body>
+</html>
+
